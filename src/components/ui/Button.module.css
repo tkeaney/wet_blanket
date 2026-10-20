@@ -61,11 +61,6 @@
   background: var(--color-hover);
 }
 
-.danger {
-  color: var(--color-danger);
-  background: var(--color-danger-soft);
-}
-
 .iconButton {
   display: inline-grid;
   place-items: center;

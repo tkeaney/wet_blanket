@@ -1,14 +1,13 @@
 import { useEffect, useMemo, useState } from 'react'
 import { periodForTime } from '../domain/routine'
 import type { AppData, DailyLog, IsoDate, Mood, NewRoutineInput } from '../domain/types'
-import { createEmptyData, loadData, saveData } from './storage'
+import { loadData, saveData } from './storage'
 
 export interface AppActions {
   setMood: (date: IsoDate, mood: Mood) => void
   setJournal: (date: IsoDate, journal: string) => void
   toggleCompletion: (date: IsoDate, itemId: string) => void
   addRoutineItem: (input: NewRoutineInput) => void
-  clearAll: () => void
 }
 
 /** Single source of truth for persisted app state. */
@@ -41,8 +40,6 @@ export function useAppData(): { data: AppData; actions: AppActions } {
             ? { ...current, habits: [...current.habits, base] }
             : { ...current, medications: [...current.medications, { ...base, instructions }] }
         }),
-
-      clearAll: () => setData(createEmptyData()),
     }
   }, [])
 

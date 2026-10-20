@@ -5,7 +5,10 @@
       "Read(//Applications/Google Chrome.app/Contents/MacOS/**)",
       "Read(//Users/tesskeaney/Library/Caches/**)",
       "Bash(echo \"lint exit: $?\")",
-      "Bash(pkill -f \"vite preview --port 4317\")"
+      "Bash(pkill -f \"vite preview --port 4317\")",
+      "Bash(sed -i '' 's#<path d=\"M33 37.3 L35.4 38.3\" stroke=\"\\\\#e3877c\"#<path d=\"M41.2 40.7 L43 41.5\" stroke=\"\\\\#e3877c\"#' /private/tmp/claude-501/-Users-tesskeaney-Desktop-Personal-Projects-wet-blanket/f9b5a06f-97dc-4580-a589-e9ad36f690cc/scratchpad/gremlin.svg)",
+      "Bash(sed -e 's/width=\"400\" height=\"400\"/width=\"64\" height=\"64\"/' -e '/<!--/d' /private/tmp/claude-501/-Users-tesskeaney-Desktop-Personal-Projects-wet-blanket/f9b5a06f-97dc-4580-a589-e9ad36f690cc/scratchpad/gremlin.svg)",
+      "Bash(sed -i '' 's/<Logo size={30} \\\\/>/<Logo size={38} \\\\/>/' src/components/layout/Topbar.tsx)"
     ]
   }
 }

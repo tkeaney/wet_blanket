@@ -15,7 +15,7 @@
 }
 
 .purple {
-  background: var(--purple-50);
+  background: var(--color-accent-soft);
   border-color: var(--purple-100);
 }
 

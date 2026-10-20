@@ -59,7 +59,7 @@ button {
 }
 
 ::selection {
-  background: var(--purple-200);
+  background: var(--green-200);
 }
 
 .sr-only {

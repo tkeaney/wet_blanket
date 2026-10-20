@@ -48,15 +48,15 @@
   --purple-600: #7459b6;
   --purple-700: #5a4392;
 
-  /* Semantic */
-  --color-primary: var(--purple-600);
-  --color-primary-hover: var(--purple-700);
-  --color-primary-soft: var(--purple-100);
-  --color-success: var(--green-600);
-  --color-success-soft: var(--green-100);
-  --color-danger: #b8533f;
-  --color-danger-soft: #fbece7;
-  --color-focus: var(--purple-400);
+  /* Semantic: green leads, purple is an accent */
+  --color-primary: var(--green-600);
+  --color-primary-hover: var(--green-700);
+  --color-primary-soft: var(--green-100);
+  --color-primary-text: var(--green-700);
+  --color-accent: var(--purple-500);
+  --color-accent-text: var(--purple-600);
+  --color-accent-soft: var(--purple-50);
+  --color-focus: var(--green-400);
 
   /* Mood scale: muted → warm */
   --mood-rough: #8e9bb0;

@@ -42,7 +42,7 @@
 }
 
 .tabSelected {
-  color: var(--purple-700);
+  color: var(--color-primary-text);
   background: var(--color-surface);
   box-shadow: var(--shadow-sm);
 }
@@ -77,8 +77,8 @@
 
 .field input:focus {
   outline: none;
-  border-color: var(--purple-400);
-  box-shadow: 0 0 0 3px var(--purple-100);
+  border-color: var(--color-focus);
+  box-shadow: 0 0 0 3px var(--color-primary-soft);
 }
 
 @keyframes pop-in {

@@ -2,75 +2,70 @@
   position: sticky;
   top: 0;
   z-index: 10;
-  display: flex;
-  align-items: center;
-  gap: var(--space-3);
-  height: var(--topbar-height);
-  padding: 0 var(--space-6);
   background: color-mix(in srgb, var(--color-bg) 88%, transparent);
   backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-border);
 }
 
-.mobileBrand {
-  display: none;
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  max-width: calc(var(--content-max) + 2 * var(--space-8));
+  height: var(--topbar-height);
+  margin: 0 auto;
+  padding: 0 var(--space-8);
+}
+
+.brand {
+  display: flex;
   align-items: center;
   gap: var(--space-2);
+  margin-left: calc(-1 * var(--space-2));
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-md);
   font-weight: var(--weight-bold);
 }
 
-.breadcrumb {
+.brand:hover {
+  background: var(--color-hover);
+}
+
+.nav {
+  display: flex;
+  gap: var(--space-1);
+}
+
+.navItem {
   display: flex;
   align-items: center;
   gap: var(--space-2);
-  min-width: 0;
-  font-size: var(--text-sm);
-  color: var(--color-text-muted);
-}
-
-.divider {
-  color: var(--color-text-faint);
-}
-
-.current {
-  color: var(--color-text);
-  font-weight: var(--weight-medium);
-}
-
-.actions {
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
-  margin-left: auto;
-}
-
-.addMobile {
-  display: none;
-  color: white;
-  background: var(--color-primary);
+  height: 34px;
+  padding: 0 var(--space-3);
   border-radius: var(--radius-pill);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-muted);
+  transition: background var(--duration-fast) var(--ease);
 }
 
-.addMobile:hover {
-  color: white;
-  background: var(--color-primary-hover);
+.navItem:hover {
+  color: var(--color-text);
+  background: var(--color-hover);
+}
+
+.navItem.active {
+  color: var(--color-primary-text);
+  background: var(--color-primary-soft);
 }
 
 @media (max-width: 768px) {
-  .topbar {
+  .inner {
     padding: 0 var(--space-4);
-    border-bottom: 1px solid var(--color-border);
   }
 
-  .mobileBrand {
-    display: flex;
-  }
-
-  .breadcrumb,
-  .addDesktop {
+  .nav {
     display: none;
-  }
-
-  .addMobile {
-    display: inline-grid;
   }
 }
