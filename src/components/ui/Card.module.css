@@ -1,0 +1,26 @@
+.card {
+  padding: var(--space-6);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.plain {
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.green {
+  background: var(--green-50);
+  border-color: var(--green-100);
+}
+
+.purple {
+  background: var(--purple-50);
+  border-color: var(--purple-100);
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: var(--space-5) var(--space-4);
+  }
+}

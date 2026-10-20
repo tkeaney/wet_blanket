@@ -1,0 +1,110 @@
+/*
+ * Design tokens. Components reference these variables only — never raw values —
+ * so the whole look can be tuned from this one file.
+ */
+:root {
+  /* Type */
+  --font-sans: 'Nunito', ui-rounded, 'SF Pro Rounded', system-ui, sans-serif;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.375rem;
+  --text-2xl: 1.875rem;
+  --text-3xl: 2.25rem;
+  --weight-regular: 500;
+  --weight-medium: 650;
+  --weight-bold: 800;
+  --leading-tight: 1.2;
+  --leading-normal: 1.55;
+
+  /* Neutrals (warm, Notion-like) */
+  --color-bg: #fbfaf6;
+  --color-surface: #ffffff;
+  --color-sidebar: #f4f2ec;
+  --color-hover: rgb(55 53 47 / 0.06);
+  --color-pressed: rgb(55 53 47 / 0.1);
+  --color-border: #ebe7df;
+  --color-border-strong: #dcd7cc;
+  --color-text: #37352f;
+  --color-text-muted: #78756d;
+  --color-text-faint: #a8a49b;
+
+  /* Brand: moss green */
+  --green-50: #f2f8f2;
+  --green-100: #e2efe2;
+  --green-200: #c8e1c9;
+  --green-400: #86bb8c;
+  --green-500: #67a370;
+  --green-600: #4f8a59;
+  --green-700: #3b6a43;
+
+  /* Brand: blanket purple */
+  --purple-50: #f6f3fc;
+  --purple-100: #ece6f8;
+  --purple-200: #d9cdf1;
+  --purple-400: #a68fdc;
+  --purple-500: #8b70cc;
+  --purple-600: #7459b6;
+  --purple-700: #5a4392;
+
+  /* Semantic */
+  --color-primary: var(--purple-600);
+  --color-primary-hover: var(--purple-700);
+  --color-primary-soft: var(--purple-100);
+  --color-success: var(--green-600);
+  --color-success-soft: var(--green-100);
+  --color-danger: #b8533f;
+  --color-danger-soft: #fbece7;
+  --color-focus: var(--purple-400);
+
+  /* Mood scale: muted → warm */
+  --mood-rough: #8e9bb0;
+  --mood-low: #9fb3a6;
+  --mood-okay: #d6c38c;
+  --mood-good: #eba974;
+  --mood-great: #e4806a;
+
+  /* Space (4px grid) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+
+  /* Shape */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 22px;
+  --radius-pill: 999px;
+
+  /* Elevation */
+  --shadow-sm: 0 1px 2px rgb(55 53 47 / 0.06);
+  --shadow-md: 0 2px 4px rgb(55 53 47 / 0.04), 0 6px 16px rgb(55 53 47 / 0.06);
+  --shadow-lg: 0 12px 40px rgb(55 53 47 / 0.16);
+
+  /* Motion */
+  --ease: cubic-bezier(0.2, 0.7, 0.3, 1);
+  --duration-fast: 120ms;
+  --duration-base: 200ms;
+
+  /* Layout */
+  --sidebar-width: 248px;
+  --content-max: 760px;
+  --topbar-height: 52px;
+  --mobile-nav-height: 64px;
+  /* Mobile breakpoint is 768px (CSS vars can't be used in media queries). */
+}
+
+/* Any element with data-mood exposes --mood / --mood-soft to its subtree. */
+[data-mood='rough'] { --mood: var(--mood-rough); }
+[data-mood='low'] { --mood: var(--mood-low); }
+[data-mood='okay'] { --mood: var(--mood-okay); }
+[data-mood='good'] { --mood: var(--mood-good); }
+[data-mood='great'] { --mood: var(--mood-great); }
+[data-mood] { --mood-soft: color-mix(in srgb, var(--mood) 22%, white); }

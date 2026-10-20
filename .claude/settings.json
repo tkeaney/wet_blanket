@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Read(//Applications/Google Chrome.app/Contents/MacOS/**)",
+      "Read(//Users/tesskeaney/Library/Caches/**)",
+      "Bash(echo \"lint exit: $?\")",
+      "Bash(pkill -f \"vite preview --port 4317\")"
+    ]
+  }
+}

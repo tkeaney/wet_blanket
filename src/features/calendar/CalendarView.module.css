@@ -1,0 +1,9 @@
+.stack {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.controls {
+  display: flex;
+  gap: var(--space-1);
+}

@@ -1,0 +1,41 @@
+.teaser {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.icon {
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  color: var(--green-700);
+  background: var(--green-200);
+}
+
+.copy {
+  display: grid;
+  flex: 1;
+  gap: var(--space-1);
+}
+
+.copy h2 {
+  font-size: var(--text-lg);
+}
+
+.copy p {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 768px) {
+  .teaser {
+    flex-wrap: wrap;
+  }
+
+  .teaser > button {
+    width: 100%;
+  }
+}
